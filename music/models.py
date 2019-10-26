@@ -18,3 +18,7 @@ class Song(models.Model):
     format = models.CharField(max_length=10, default='')  # file type, i.e. mp4
     song_title = models.CharField(max_length=100, default='')  # song title
     duration = models.CharField(max_length=100, default='')  # song duration
+    favorite = models.BooleanField(default=False)  # favorite the song
+
+    def __str__(self):
+        return self.song_title  # returning song title
