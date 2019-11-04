@@ -12,7 +12,7 @@ def index(request):
 
 
 def retrieve(request, album_id):
-    album = get_object_or_404(Albums, pk=album_id,)
+    album = get_object_or_404(Albums, pk=album_id)
     return render(request, 'music/retrieve.html', {'album': album})
 
 
