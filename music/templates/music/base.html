@@ -27,21 +27,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'music:index' %}">Albums</a>
-          <a class="nav-link" href="#">Songs</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link disabled" href="#">Logout</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Download</a>
-          <a class="dropdown-item" href="#">Favorites</a>
-          <a class="dropdown-item" href="{% url 'music:album-add' %}">Add Album</a>
-        </div>
-      </li>
+          <a class="nav-link" href="{% url 'music:index' %}">Songs</a>
+        <a class="nav-link" href="{% url 'music:album-add' %}">Add Album</a>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
