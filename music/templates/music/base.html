@@ -18,18 +18,21 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
     <!--Items-->
+    <a href="{% url 'music:logout_user' %}"><i class="fas fa-sign-out-alt"></i></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-
         <a class="nav-link" href="{% url 'music:index' %}">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'music:index' %}">Albums</a>
           <a class="nav-link" href="{% url 'music:index' %}">Songs</a>
         <a class="nav-link" href="{% url 'music:album-add' %}">Add Album</a>
+          <a class="{% block login_active %}{% endblock %}" href="{% url 'music:login_user' %}">Log In</a>
     </ul>
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

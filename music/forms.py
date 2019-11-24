@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django import forms
 
+from .models import Albums, Song
+
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)

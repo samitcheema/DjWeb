@@ -1,8 +1,10 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
 
 class Albums(models.Model):
+    user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)  # current user
     name = models.CharField(max_length=100, default='')  # name of artist
     title = models.CharField(max_length=100, default='')  # title of album
     genre = models.CharField(max_length=50, default='')  # genre of album
