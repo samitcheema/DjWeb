@@ -1,10 +1,10 @@
 {% extends 'music/base.html' %}
 
 {% block body %}
-<img src="{{ albums.logo }}">
+<img src="{{ Albums.logo.url }}">
 
-<h1>{{ albums.name }}</h1>
-<h3>{{ albums.title }}</h3>
+<h1>{{ Albums.name }}</h1>
+<h3>{{ Albums.title }}</h3>
 <style>
     ul.a{
         list-style-type: circle;
@@ -16,7 +16,7 @@
     <p><strong>{{ error_message }}</strong></p>
 {% endif %}
 
-    {% for Song in albums.song_set.all %}
+    {% for Song in Albums.song_set.all %}
             {{ Song.song_title }}
             {% if Song.favorite %}
                 <img src="https://i.imgur.com/b9b13Rd.png"/>

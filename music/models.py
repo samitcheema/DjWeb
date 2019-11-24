@@ -6,7 +6,7 @@ class Albums(models.Model):
     name = models.CharField(max_length=100, default='')  # name of artist
     title = models.CharField(max_length=100, default='')  # title of album
     genre = models.CharField(max_length=50, default='')  # genre of album
-    logo = models.FileField()  # album logo
+    logo = models.FileField(upload_to='uploads/')  # album logo
     year = models.CharField(max_length=4, default='')  # album year
     record_label = models.CharField(max_length=100, default='')  # record label
 

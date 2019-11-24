@@ -1,5 +1,5 @@
 {% extends 'music/base.html' %}
-{% block Albums_active %}active{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block body %}
     <div class="container-fluid">
@@ -8,6 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form class="form-horizontal" method="post" enctype="multipart/form-data">
+                            <h3>Create an account </h3>
                             {% csrf_token %}
                             {% include 'music/form-template.html' %}
                             <div class="form-group">
