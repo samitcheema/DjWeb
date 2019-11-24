@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('music/', include('music.urls', namespace='music')),
 
+
 ]
 
